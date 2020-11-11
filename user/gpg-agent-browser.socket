@@ -1,0 +1,15 @@
+[Unit]
+Description=GnuPG cryptographic agent and passphrase cache (access for web browsers)
+Documentation=man:gpg-agent(1)
+
+[Socket]
+# GNUPG's _internal_socket_dir() creates a sub directory when using a default homedir.
+ListenSequentialPacket=%t/gnupg/d.4dofe5jn3r6ymw9kfcyt4eei/S.gpg-agent.browser
+FileDescriptorName=browser
+SocketMode=0600
+DirectoryMode=0700
+RemoveOnStop=true
+Service=gpg-agent.service
+
+[Install]
+WantedBy=sockets.target

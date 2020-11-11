@@ -1,0 +1,15 @@
+[Unit]
+Description=GnuPG cryptographic agent and passphrase cache (restricted)
+Documentation=man:gpg-agent(1)
+
+[Socket]
+# GNUPG's _internal_socket_dir() creates a sub directory when using a default homedir.
+ListenStream=%t/gnupg/d.4dofe5jn3r6ymw9kfcyt4eei/S.gpg-agent.extra
+FileDescriptorName=extra
+Service=gpg-agent.service
+SocketMode=0600
+DirectoryMode=0700
+RemoveOnStop=true
+
+[Install]
+WantedBy=sockets.target
