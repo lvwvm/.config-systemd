@@ -1,0 +1,12 @@
+[Unit]
+Description=GnuPG cryptographic agent passphrase cache
+Documentation=man:gpg-agent(1)
+Requires=gpg-agent.socket
+
+[Service]
+Sockets=gpg-agent.socket gpg-agent-ssh.socket gpg-agent-browser.socket gpg-agent-extra.socket
+ExecStart=/usr/bin/gpg-agent --supervised --options $GNUPG_AGENT_CONF --homedir $GNUPGHOME --enable-ssh-support
+ExecReload=/usr/bin/gpgconf --reload gpg-agent
+
+[Install]
+WantedBy=graphical-session-pre.target
