@@ -3,7 +3,7 @@ Description=GnuPG cryptographic agent and passphrase cache.
 Documentation=man:gpg-agent(1)
 
 [Socket]
-# GNUPG's _internal_socket_dir() creates a sub directory when using a default homedir.
+# GNUPG's _internal_socket_dir() creates a sub directory when using a non default homedir.
 ListenStream=%t/gnupg/d.4dofe5jn3r6ymw9kfcyt4eei/S.gpg-agent.ssh
 FileDescriptorName=ssh
 SocketMode=0600

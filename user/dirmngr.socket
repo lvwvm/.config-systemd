@@ -8,6 +8,5 @@ SocketMode=0600
 DirectoryMode=0700
 RemoveOnStop=true
 Service=dirmngr.service
-
 [Install]
 WantedBy=sockets.target
