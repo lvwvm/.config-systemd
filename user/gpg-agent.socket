@@ -4,7 +4,7 @@ Documentation=man:gpg-agent(1)
 
 [Socket]
 # GNUPG's _internal_socket_dir() creates a sub directory when using a default homedir.
-ListenSequentialPacket=%t/gnupg/d.4dofe5jn3r6ymw9kfcyt4eei/S.gpg-agent
+ListenStream=%t/gnupg/d.4dofe5jn3r6ymw9kfcyt4eei/S.gpg-agent
 FileDescriptorName=std
 SocketMode=0600
 DirectoryMode=0700
