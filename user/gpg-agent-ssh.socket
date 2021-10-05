@@ -10,6 +10,7 @@ SocketMode=0600
 DirectoryMode=0700
 RemoveOnStop=true
 Service=gpg-agent.service
+ExecStartPost=/usr/bin/systemctl --user set-environment SSH_AUTH_SOCK=%t/gnupg/d.4dofe5jn3r6ymw9kfcyt4eei/S.gpg-agent.ssh
 ExecStartPost=/usr/bin/systemctl --user import-environment SSH_AUTH_SOCK
 
 # Disables SSH_AUTH_SOCK only when the socket goes down.
