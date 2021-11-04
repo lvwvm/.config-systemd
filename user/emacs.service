@@ -1,12 +1,12 @@
 [Unit]
-Description= Doom Emacs text editor via/ chemacs
+Description=Emacs text editor via/ chemacs
 Documentation=info:emacs man:emacs(1) https://gnu.org/software/emacs/
 After=gpg-agent.socket gpg-agent-ssh.socket default.target
 Wants=gpg-agent.socket gpg-agent-ssh.socket
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/emacs --fg-daemon --with-profile doom
+ExecStart=/usr/bin/emacs --fg-daemon
 ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
 Restart=on-failure
 
