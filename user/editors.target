@@ -1,0 +1,6 @@
+[Unit]
+Description=Target for editors running in the background. (nvim, emacs etc.)
+
+[Install]
+WantedBy=default.target
+Also=editor-services.target

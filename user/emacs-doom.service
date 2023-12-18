@@ -6,7 +6,7 @@ Wants=gpg-agent.socket gpg-agent-ssh.socket
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/emacs --fg-daemon --with-profile doom
+ExecStart=/usr/bin/emacs --fg-daemon=doom --init-directory "~/.local/share/emacsen/doom"
 ExecStop=/usr/bin/emacsclient --eval "(kill-emacs)"
 Restart=on-failure
 

@@ -1,0 +1,9 @@
+[Unit]
+Description=Editor Services Target (lsp daemons etc.)
+Requisite=editors.target
+After=editors.target
+StopPropagatedFrom=editors.target
+ReloadPropagatedFrom=editors.target
+
+[Install]
+WantedBy=editors.target
